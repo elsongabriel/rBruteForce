@@ -117,7 +117,7 @@ class RBruteForceComponent extends Component
     public function isIpBanned($options = [])
     {
         $this->options = array_merge($this->options, $options);
-        return (bool)$this->getCount() >= $this->options['maxAttempts'];
+        return (int)$this->getCount() >= (int)$this->options['maxAttempts'];
     }
 
     /**
