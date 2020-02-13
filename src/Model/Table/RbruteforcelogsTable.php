@@ -34,7 +34,7 @@ class RbruteforcelogsTable extends Table
     {
         $validator
             ->add('id', 'valid', ['rule' => 'numeric'])
-            ->allowEmptyString('id', 'create')
+            ->allowEmptyString('id', 'ID allow empty string', 'create')
             ->allowEmptyString('data');
 
         return $validator;

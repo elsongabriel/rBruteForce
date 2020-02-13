@@ -34,11 +34,11 @@ class RbruteforcesTable extends Table
     {
         $validator
             ->requirePresence('ip', 'create')
-            ->allowEmptyString('ip', false)
+            ->allowEmptyString('ip', 'IP allow empty string',false)
             ->requirePresence('url', 'create')
-            ->allowEmptyString('url', false)
+            ->allowEmptyString('url', 'url allow empty string',false)
             ->requirePresence('expire', 'create')
-            ->allowEmptyString('expire', false);
+            ->allowEmptyString('expire', 'expire allow empty string',false);
 
         return $validator;
     }
